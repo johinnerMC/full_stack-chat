@@ -20,7 +20,6 @@ class Sockets {
                 this.io.emit('mensaje-from-server', data );
             });
             
-        
         });
     }
 
