@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { useUserActions } from "../../store/hooks/useUserActions";
 import { AuthLayout } from "../layout/AuthLayout";
 import logoGoogle from "/google.svg";
 
 export const LoginPage = () => {
 	const [showError, setShowError] = useState<string>("");
+
+	const { logInAuthentication } = useUserActions();
 
 	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
 		event.preventDefault();
@@ -20,6 +23,7 @@ export const LoginPage = () => {
 		}
 
 		console.log({ email, password, remembe });
+		logInAuthentication({ email, password });
 		form.reset();
 		setShowError("");
 	};

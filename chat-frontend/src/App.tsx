@@ -1,12 +1,7 @@
-import { RegisterPage } from "./auth/pages";
+import AppRouter from "./router/AppRouter";
 
 function App() {
-	return (
-		<>
-			{/* <LoginPage /> */}
-			<RegisterPage />
-		</>
-	);
+	return <AppRouter />;
 }
 
 export default App;
