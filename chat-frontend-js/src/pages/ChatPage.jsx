@@ -8,7 +8,7 @@ export const ChatPage = () => {
         <Sidebar/>
         <div className="bg-gray-100 xl:w-9/12 lg:w-8/12 hidden lg:block">
         {
-          (!true)
+          (true)
             ? <RightContainer/>
             : <OnHold/>
         }
