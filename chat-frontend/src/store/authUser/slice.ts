@@ -1,7 +1,7 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
 const DEFAULT_STATE: AuthUser & AuthFailed & status = {
-	status: "not-authenticated", //'checking' 'not-authenticated','authenticated'
+	status: "not-authenticated",
 	uid: "",
 	name: "",
 	email: "",
@@ -9,7 +9,7 @@ const DEFAULT_STATE: AuthUser & AuthFailed & status = {
 };
 
 type status = {
-	status: string;
+	status: "not-authenticated" | "checking" | "authenticated";
 };
 
 interface AuthUser {
