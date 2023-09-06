@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { useUserActions } from "../../store/hooks/useUserActions";
 import { AuthLayout } from "../layout/AuthLayout";
 import logoGoogle from "/google.svg";
@@ -86,9 +87,7 @@ export const LoginPage = () => {
 						type="button"
 						className="ml-2 font-medium text-base text-violet-500"
 					>
-						{/*  <Link to="/auth/register"> 
-            Inscribirse
-          </Link>   */}
+						<Link to="/auth/register">Inscribirse</Link>
 					</button>
 				</div>
 			</form>

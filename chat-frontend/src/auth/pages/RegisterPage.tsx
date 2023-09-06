@@ -1,14 +1,20 @@
-/* import { Link } from "react-router-dom"; */
+import { Link } from "react-router-dom";
 
 import { useResolverForm } from "../../hooks/useResolverForm";
+import { useUserActions } from "../../store/hooks/useUserActions";
 import { AuthLayout } from "../layout/AuthLayout";
 import logoGoogle from "/google.svg";
 
 export const RegisterPage = () => {
 	const { register, handleSubmit, errors } = useResolverForm();
 
+	const { newUserAuthentication } = useUserActions();
+
 	const onSubmit = handleSubmit((data) => {
-		console.log(data);
+		newUserAuthentication({
+			name: data.userName,
+			...data,
+		});
 	});
 
 	return (
@@ -89,7 +95,7 @@ export const RegisterPage = () => {
 						type="button"
 						className="ml-2 font-medium text-base text-violet-500"
 					>
-						{/* <Link to="/auth/login">Acceder</Link> */}
+						<Link to="/auth/login">Acceder</Link>
 					</button>
 				</div>
 			</form>
