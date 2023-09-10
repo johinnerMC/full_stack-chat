@@ -1,5 +1,6 @@
 import { createSlice, type PayloadAction } from "@reduxjs/toolkit";
 
+
 const DEFAULT_STATE: ChatStatus = {
 	uid: "",
 	activeChat: null, //? UID del usuario al que le voy a enviar mensajes

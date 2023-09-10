@@ -3,7 +3,7 @@ import { scrollToBottom } from "../helpers/scrollToBottom";
 import { User } from "../store/hooks/interfaces";
 import { useAppSelector } from "../store/hooks/store";
 import { useChatActions } from "../store/hooks/useChatActions";
-import user02 from "/avatar/user-02.jpg";
+import user02 from "/avatar/adventurer-1.jpg";
 
 type props = {
 	key: string;

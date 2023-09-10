@@ -1,6 +1,6 @@
 import React from "react";
 import { User } from "../store/hooks/interfaces";
-import user01 from "/avatar/user-01.jpg";
+import user01 from "/avatar/adventurer-1.jpg";
 
 type props = {
 	key: string;

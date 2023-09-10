@@ -1,5 +1,5 @@
 import React from "react";
-import user01 from "/avatar/user-01.jpg";
+import user01 from "/avatar/adventurer-2.jpg";
 
 type props = {
 	key: string;
