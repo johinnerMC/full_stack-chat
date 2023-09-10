@@ -4,12 +4,15 @@ import {
 	AccordionHeader,
 	AccordionList,
 } from "@tremor/react";
+import { useChatActions } from "../store/hooks/useChatActions";
 import { useUserActions } from "../store/hooks/useUserActions";
 
 export const SpeedDial = () => {
 	const { useLogout } = useUserActions();
+	const { resetChatStatus } = useChatActions();
 	const signOff = () => {
 		useLogout();
+		resetChatStatus();
 	};
 	return (
 		<AccordionList className=" absolute inset-y-0 right-0 max-w-md mx-auto">

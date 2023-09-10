@@ -1,11 +1,11 @@
 export interface LoginResponse {
     ok:      boolean;
-    usuario: Usuario;
+    usuario: User;
     token:   string;
     msg?: string;
 }
 
-export interface Usuario {
+export interface User {
     name:   string;
     email:  string;
     online: boolean;

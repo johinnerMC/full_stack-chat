@@ -8,6 +8,7 @@ import user02 from "/avatar/user-02.jpg";
 
 export const RightContainer = () => {
 	const { name } = useAppSelector((state) => state.user);
+	const { activeChat } = useAppSelector((state) => state.chat);
 	return (
 		<>
 			{/*    descripcion superior   */}
@@ -28,7 +29,7 @@ export const RightContainer = () => {
 				</div>
 			</div>
 
-			{false ? (
+			{!activeChat ? (
 				<OnHold />
 			) : (
 				<>
